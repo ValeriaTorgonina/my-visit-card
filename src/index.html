@@ -7,12 +7,300 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <title>Valeria Torgonina</title>
 </head>
 
 <body>
     <div class="wrapper">
+
+        <header class="main-header">
+            <div class="container">
+                <a href="index.html" class="main-header__link">
+                    <svg class="main-header__logo">
+                        <use xlink:href="assets/img/sprite.svg#fox-logo"></use>
+                    </svg>
+                </a>
+                <nav class="main-nav">
+                    <button class="main-nav__burger" title="menu"></button> 
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link active">главная</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">навыки</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">работы</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="intro">
+                <div class="container">
+                    <picture class="intro__img">
+                        <img class="lazyload" src="#" data-src="assets/img/my-photo.jpg" height="100%" width="100%" alt="valeria torgonina photo">
+                    </picture>
+                    <div class="intro__decor intro__decor--left"></div>
+                    <div class="intro__decor intro__decor--right"></div>
+                    <div class="intro__content">
+                        <h1 class="main-title">Валерия Торгонина</h1>
+                        <h2 class="title">html-верстальщик</h2>
+                        <p class="intro__text">
+                            Привет, меня зовут Валерия Торгонина и я html-верстальщик. Это мое портфолио. Давай же листнем дальше и узнаем больше обо мне.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <div class="container">
+                    <h2 class="title">навыки</h2>
+                    <div class="skills__list">
+                        <div class="swiper-wrapper">
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="98" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">HTML 5</h3>
+                                <span class="skills__description">
+                                    Моя разметка семантична и структурирована.
+                                    Знакома с препроцессором Pug, но редко его использую.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="90" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">CSS 3</h3>
+                                <span class="skills__description">
+                                    Моя любимая часть верстки. 
+                                    Стили всегда разбиты по компонентам. 
+                                    Избегаю большой вложенности селекторов.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">JS</h3>
+                                <span class="skills__description">
+                                    Считаю свой уровень знания JS отличным, 
+                                    чтобы справиться с работой верстальщика.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">БЭМ</h3>
+                                <span class="skills__description">
+                                    Работаю по данной методологии достаточно давно,
+                                    поэтому редко сомневаюсь в наименовании класса.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+
+                                <h3 class="skills__name">SASS</h3>
+                                <span class="skills__description">
+                                    С удовольствием использую для облегчения работы со стилями.
+                                    Также был опыт использования Stylus.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">Jquery</h3>
+                                <span class="skills__description">
+                                    Знаю не хуже, чем нативный JS. 
+                                    Использовала Jquery в большей части своих проектов.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">Gulp</h3>
+                                <span class="skills__description">
+                                    Gulp - мои руки и ноги, поэтому научилась дорабатывать
+                                    и редактировать свой сборщик.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">React</h3>
+                                <span class="skills__description">
+                                    Уровень знания этой библиотеки считаю стартовым.
+                                    Использовала в связке с Redux для тренировочных проектов.
+                                </span>
+                            </div>
+                            <div class="skills__item swiper-slide">
+                                <div class="counter" data-cp-percentage="85" data-cp-color="#F4ABAC"></div>
+                                <h3 class="skills__name">Photoshop</h3>
+                                <span class="skills__description">
+                                    Очень часто использую Adobe Photoshop при работе 
+                                    с макетами, поэтому привыкла к данной программе. 
+                                    Но мне не составит труда освоить что-то новое 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="swiper-button-prev"  id="skills-prev"></button>
+                    <button class="swiper-button-next" id="skills-next"></button>
+                </div>
+            </section>
+            <section class="works">
+                <div class="container">
+                    <h2 class="title">проекты</h2>
+                    <div class="works__inner">
+                        <section class="works__slider">
+                            <div class="swiper-wrapper">
+                                <div class="works__item swiper-slide" id="works-item-1">
+                                    <picture class="works__item-image">
+                                        <img class="lazyload" alt="the band" src="assets/img/stub-img.jpg" data-src="assets/img/stub-img.jpg" height="100%" width="100%">
+                                    </picture>
+                                    <a href="#" class="works__item-name">the band</a>
+                                </div>
+                                <div class="works__item swiper-slide" id="works-item-2">
+                                    <picture class="works__item-image">
+                                        <img class="lazyload" alt="boostfolia" src="assets/img/stub-img.jpg" data-src="assets/img/stub-img.jpg" height="100%" width="100%">
+                                    </picture>
+                                    <a href="#" class="works__item-name">boostfolia</a>
+                                </div>
+                                <div class="works__item swiper-slide" id="works-item-3">
+                                    <picture class="works__item-image">
+                                        <img class="lazyload" alt="piroll" src="assets/img/stub-img.jpg" data-src="assets/img/stub-img.jpg" height="100%" width="100%">
+                                    </picture>
+                                    <a href="#" class="works__item-name">piroll</a>
+                                </div>
+                                <div class="works__item swiper-slide" id="works-item-4">
+                                    <picture class="works__item-image">
+                                        <img class="lazyload" alt="lian" src="assets/img/stub-img.jpg" data-src="assets/img/stub-img.jpg" height="100%" width="100%">
+                                    </picture>
+                                    <a href="#" class="works__item-name">lian</a>
+                                </div>
+                                <div class="works__item swiper-slide" id="works-item-5">
+                                    <picture class="works__item-image">
+                                        <img class="lazyload" alt="css drawing" src="assets/img/stub-img.jpg" data-src="assets/img/stub-img.jpg" height="100%" width="100%">
+                                    </picture>
+                                    <a href="#" class="works__item-name">CSS drawing</a>
+                                </div>
+                            </div>
+                            <div class="works-pagination"></div>
+                        </section>
+                        <section class="works__description">
+                            <h3 class="works__description-title">Описание</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Pariatur numquam reiciendis ipsam nisi veniam tempore.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. A ea incidunt 
+                                cupiditate obcaecati, at architecto cumque velit iure debitis laboriosam!
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="testimonials">
+                <h2 class="title">отзывы</h2>
+                <svg class="testimonials__quote-icon">
+                    <use xlink:href="assets/img/sprite.svg#quote"></use>
+                </svg>
+                <section class="testimonials__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <blockquote class="testimonials__content">
+                                <p class="testimonials__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Odio, vitae! Veritatis unde possimus inventore reprehenderit, 
+                                    repudiandae quos, voluptas earum cupiditate doloremque, totam cumque.
+                                        Expedita molestiae aut dignissimos doloribus et corporis?
+                                </p>
+                                <cite class="testimonials__author">
+                                    <span class="testimonials__author-name">Владлен Волков</span>  
+                                    <span class="testimonials__author-position">frontent-разработчик Ronte</span>
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testimonials__content">
+                                <p class="testimonials__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    Fugit accusamus totam fugiat illo odit adipisci debitis 
+                                    nemo, quas porro saepe vitae eaque quis dolorum velit?
+                                </p>
+                                <cite class="testimonials__author">
+                                    <span class="testimonials__author-name">Дмитрий Стаценко</span>  
+                                    <span class="testimonials__author-position">html-верстальщик Ronte</span>
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testimonials__content">
+                                <p class="testimonials__text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                    Necessitatibus quos eligendi cum vero voluptates esse deleniti 
+                                    reprehenderit, voluptatum nisi ipsam cupiditate a aliquid laudantium at fugiat! 
+                                    Quis quidem incidunt non assumenda, maxime ipsum esse.
+                                </p>
+                                <cite class="testimonials__author">
+                                    <span class="testimonials__author-name">Павел Никифоров</span>  
+                                    <span class="testimonials__author-position">html-верстальщик банка ВТБ</span>
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testimonials__content">
+                                <p class="testimonials__text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                    Necessitatibus quos  esse deleniti 
+                                    reprehenderit, voluptatum nisi ipsam cupiditate laudantium at fugiat! 
+                                    Quis quidem incidunt non assumenda, maxime ipsum esse.
+                                </p>
+                                <cite class="testimonials__author">
+                                    <span class="testimonials__author-name">Руслан Сайфутдинов</span>  
+                                    <span class="testimonials__author-position">html-верстальщик Dextra</span>
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <button class="swiper-button-prev" id="testimonials-prev"></button>
+                    <button class="swiper-button-next" id="testimonials-next"></button>
+                </section>
+            </section>
+        </main>
+        <footer class="main-footer">
+            <div class="container">
+                <a href="tel:+79181494996" class="main-footer__phone">+7 (918) 149 - 49 - 96</a>
+                <a href="mailto:lovec.cnov@mail.ru" class="main-footer__mail">lovec.cnov@mail.ru</a>
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg class="socials__icon">
+                                <use xlink:href="assets/img/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg class="socials__icon">
+                                <use xlink:href="assets/img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link">
+                            <svg class="socials__icon">
+                                <use xlink:href="assets/img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>

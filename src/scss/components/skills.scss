@@ -1,0 +1,58 @@
+.skills {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 0 10px -5px rgb(114, 114, 114);
+
+    .container {
+        position: relative;
+    }
+
+    &__list {
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    &__item.swiper-slide {
+        width: 30%;
+        height: 210px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        &:hover {
+            .counter {
+                color:transparent;
+                opacity: 0;
+                height: 0!important;
+            }
+            .skills__description {
+                height: auto;
+                opacity: 1;
+            }
+        }
+    }
+
+    .counter {
+        position: relative;
+        margin-bottom: 10px;
+        transition: 0.5s;
+        background: white;
+    }
+
+    &__name {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        display: block;
+        width: 230px;
+        height: 0;
+        margin: 0 auto;
+        line-height: 25px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,131 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $darkgray;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $darkgray;
+}
+
+input, textarea, button {
+    background: none;
+    border: none;
+    resize: none;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    object-fit: cover;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.main-title {
+    font-size: 55px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.title {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.counter {
+    display: inline-block;
+    width:150px;
+    height:150px;
+    position:relative;
+    transition: height .2s ease-in-out;
+    border-radius:50%;
+
+    .percentage {
+        position:absolute;
+        font-size: 30px;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+
+        &__symbol {
+            font-size: 20px;
+        }
+    }
+
+    canvas {
+        position:absolute;
+        top:0;
+        left:0;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+
+    &__icon {
+        fill: $darkgray;
+        width: 25px;
+        height: 25px;
+        transition: 0.3s;
+
+        &:hover {
+            fill: $pink;
+        }
+        
+        &:active {
+            fill: $lightpink;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    color: $pink;
+    transform: translate(40px, 0) scale(0.9);
+}
+
+.swiper-button-prev:after {
+    transform: translate(-40px, 0) scale(0.9);
+}
+
+.swiper-pagination-bullets {
+    --swiper-theme-color: #F4ABAC;
+    transform: scale(1);
+}
+
+.swiper-pagination-bullet-active {
+    transform: scale(1.1);
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+
