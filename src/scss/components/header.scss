@@ -3,10 +3,10 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 25px 0;
-    background: white;
+    padding: 15px 0;
     transition: 0.4s;
-    z-index: 2;
+    background: rgba(47, 70, 59, 0.6);
+    z-index: 3;
 
     &.out {
         transform: translate(0, -150px);

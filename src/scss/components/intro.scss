@@ -19,6 +19,7 @@
         width: 50%;
         z-index: 2;
         transition: 0.5s;
+        color: white;
     }
     &__text {
         max-width: 450px;
@@ -33,8 +34,6 @@
         top: 0;
         left: 0%;
         z-index: 2;
-        // clip-path: polygon(155px 0%, 100% 0%, 365px 100%, 0% 100%);
-        filter: grayscale(1);
         transition: 3s;
         z-index: 0;
 
@@ -46,45 +45,44 @@
 
     &__decor {
         position: absolute;
-        top: 0;
-        height: 100vh;
+        height: 50vh;
+        width: 10%;
         z-index: 1;
         transition: 0.5s;
 
         &--left {
             left: 0;
-            width: 60%;
-            transform: translate(-20%, 0) skew(-15deg, 0deg);
-            background: linear-gradient(to right, 
-                #D9E2DE 40%,  
-                white 40%, white 80%, 
-                #ffe9eb 80%
-            );
+            top: 0;
+            background: $lightgreen;
+            transform: translate(-51%, 0) skew(-22deg, 0deg);
         }
     
         &--right {
             right: 0;
-            width: 30%;
-            transform: translate(40%, 0) skew(-15deg, 0deg);
-            background: linear-gradient(to right, 
-                $pink 55%, 
-                $darkpink 55%
-            );
+            bottom: 0;
+            background: $darkgreen1;
+            transform: translate(51%, 0) skew(-22deg, 0deg);
         }
+
+        // &--left {
+        //     left: 0;
+        //     width: 60%;
+        //     transform: translate(-20%, 0) skew(-15deg, 0deg);
+        //     background: linear-gradient(to right, 
+        //         $lightgreen 40%,  
+        //         $lightgreen1 40%, $lightgreen1 80%, 
+        //         $green 80%
+        //     );
+        // }
+    
+        // &--right {
+        //     right: 0;
+        //     width: 30%;
+        //     transform: translate(40%, 0) skew(-15deg, 0deg);
+        //     background: linear-gradient(to right, 
+        //         $darkgreen 55%, 
+        //         $darkgreen1 55%
+        //     );
+        // }
     }
-
-    &__img:hover {
-        & ~ .intro__decor--left {
-            transform: translate(-100%, 0) skew(-15deg, 0deg);
-        }
-
-        & ~ .intro__decor--right {
-            transform: translate(100%, 0) skew(-15deg, 0deg);
-        }
-
-        & ~ .intro__content {
-            color: white;
-        }
-    }
-
 }

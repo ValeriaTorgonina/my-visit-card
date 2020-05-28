@@ -12,9 +12,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0 auto;
-        fill: $lightpink;
+        fill: $lightgreen1;
         width: 300px;
         height: 300px;
+        opacity: 0.3;
     }
 
     &__content {

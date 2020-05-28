@@ -29,7 +29,7 @@ class CircleProgressController {
     this.items.forEach(el => el.reset());
     this.isInited = false;
   }
-}
+};
 
 class CircleProgressItem {
   constructor(elem) {
@@ -83,7 +83,7 @@ class CircleProgressItem {
   }
 
   destroy() {}
-}
+};
 
 class CircleProgressCanvas {
   
@@ -116,7 +116,7 @@ class CircleProgressCanvas {
   }
 
   _drawBaseCircle() {
-    this._drawArc(Math.PI * 4, "#ffe9eb");
+    this._drawArc(Math.PI * 4, "#CCD1C4");
   }
 
   _drawArc(end, lineColor) {
@@ -126,7 +126,7 @@ class CircleProgressCanvas {
     this.ctx.strokeStyle = lineColor;
     this.ctx.stroke();
   }
-}
+};
 
 class Works {
   constructor() {
@@ -161,9 +161,10 @@ class Works {
         el: '.works-pagination',
         clickable: true,
       },
-    });
+    })
+    
     this.addHandlerForWorkText();
-  }
+  };
 
   addHandlerForWorkText() {
     this.worksSlider.on('transitionEnd', () => {
@@ -174,8 +175,33 @@ class Works {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+class Header {
+  constructor() {
+    this.header = document.querySelector('.main-header');
+    this.headerMenu = document.querySelector('.main-nav__list');
+    this.burgerBtn = document.querySelector('.main-nav__burger');
+    this.toggleMenu();
+  }
 
+  hideHeader() {
+    this.header.classList.add('out');
+    this.headerMenu.classList.remove('open');
+    this.burgerBtn.classList.remove('cross');
+  }
+
+  showHeader() {
+    this.header.classList.remove('out');
+  }
+
+  toggleMenu() {
+    this.burgerBtn.onclick = () => {
+      this.headerMenu.classList.toggle('open');
+      this.burgerBtn.classList.toggle('cross');
+    }
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
   new Works();
 
   const skillsSlider = new Swiper ('.skills__list', {
@@ -197,12 +223,21 @@ document.addEventListener("DOMContentLoaded", function() {
     },
   });
 });
+const header = new Header();
 const skillsController = new CircleProgressController('.counter');
 const skills = document.querySelector(".skills");
 const skillsCordTop = skills.offsetTop;
+let scrollPrev = 0;
 
 document.addEventListener("scroll", function() {
   if(skillsCordTop <= pageYOffset) {
     skillsController.init();
   }
+
+  if ( window.scrollY > window.innerHeight && window.scrollY > scrollPrev ) {
+    header.hideHeader();
+  } else {
+    header.showHeader();
+  }
+  scrollPrev = window.scrollY;
 });

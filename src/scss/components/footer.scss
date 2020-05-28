@@ -1,6 +1,6 @@
 .main-footer {
     padding: 50px 0;
-    background: $mint;
+    background: $darkgreen1;
 
     .container {
         display: flex;
@@ -13,16 +13,17 @@
         font-size: 25px;
         font-weight: lighter;
         transition: 0.3s;
-        border-bottom: 1px dotted transparent;
+        border-bottom: 1px solid transparent;
+        color: $lightgray;
 
         &:hover {
-            color: $pink;
-            border-bottom: 1px dotted $pink;
+            color: $orange;
+            border-bottom: 1px solid $orange;
         }
 
         &:active {
-            color: $lightpink;
-            border-bottom: 1px dotted $lightpink;
+            color: $darkorange;
+            border-bottom: 1px solid $darkorange;
         }
 
     }

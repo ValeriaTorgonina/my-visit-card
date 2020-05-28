@@ -7,7 +7,6 @@
         right: -100vw; 
         transform: translate(0, 100%);
         width: 100vw;
-        background: $lightpink;
         transition: 0.3s;
         box-shadow: inset 0 10px 10px -15px $darkgray;
 
@@ -17,8 +16,10 @@
     }
 
     &__item {
+        background: rgba(47, 70, 59, 0.6);
+
         &:hover {
-            background: $lightpink;
+            background: rgba(47, 70, 59, 0.8);
         }
     }
 
@@ -28,12 +29,20 @@
         display: inline-block;
         width: 100%;
         height: 100%;
-        font-size: 16px;
-        color: $pink;
+        font-size: 24px;
+        color: $lightgray;
         box-sizing: border-box;
 
+        &:hover {
+            color: $orange;
+        }
+
+        &:active {
+            color: $darkorange;
+        }
+
         &.active {
-            color: $darkpink;
+            color: $orange;
         }
     }
 
@@ -44,8 +53,8 @@
         margin-top: 20px;
         width: 35px;
         height: 22px;
-        border-top: 2px solid $darkgray;
-        border-bottom: 2px solid $darkgray;
+        border-top: 2px solid $lightgreen;
+        border-bottom: 2px solid $lightgreen;
         transition: 0.3s;
         cursor: pointer;
 
@@ -58,8 +67,29 @@
             transform: translate(0, -50%);
             width: 35px;
             height: 2px;
-            background: $darkgray;
+            background: $lightgray;
             transition: 0.3s;
+        }
+
+        &:hover {
+            border-top: 2px solid $orange;
+            border-bottom: 2px solid $orange;
+
+            &:before,
+            &:after {
+                background: $orange;
+            }
+
+        }
+        
+        &:active {
+            border-top: 2px solid $darkorange;
+            border-bottom: 2px solid $darkorange;
+
+            &:before,
+            &:after {
+                background: $darkorange;
+            }
         }
 
         &.cross {

@@ -45,6 +45,10 @@ h1, h2, h3, h4, p {
     margin-bottom: 40px;
     text-transform: capitalize;
     font-weight: 300;
+
+    &--light {
+        color: $lightgreen;
+    }
 }
 
 .text {
@@ -85,17 +89,17 @@ h1, h2, h3, h4, p {
     width: 130px;
 
     &__icon {
-        fill: $darkgray;
+        fill: $lightgray;
         width: 25px;
         height: 25px;
         transition: 0.3s;
 
         &:hover {
-            fill: $pink;
+            fill: $orange;
         }
         
         &:active {
-            fill: $lightpink;
+            fill: $darkorange;
         }
     }
 }
@@ -110,7 +114,7 @@ h1, h2, h3, h4, p {
 
 .swiper-button-next:after, 
 .swiper-button-prev:after {
-    color: $pink;
+    color: $orange;
     transform: translate(40px, 0) scale(0.9);
 }
 
@@ -119,13 +123,12 @@ h1, h2, h3, h4, p {
 }
 
 .swiper-pagination-bullets {
-    --swiper-theme-color: #F4ABAC;
+    --swiper-theme-color: #517765;
     transform: scale(1);
 }
 
 .swiper-pagination-bullet-active {
-    transform: scale(1.1);
-    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
 }
 
 
