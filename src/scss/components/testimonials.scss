@@ -5,6 +5,10 @@
     padding: 80px 0;
     box-shadow: 0 0 10px -5px rgb(114, 114, 114);
 
+    .title {
+        margin-bottom: 100px;
+    }
+
     &__quote-icon {
         position: absolute;
         display: block;
@@ -18,8 +22,11 @@
         opacity: 0.3;
     }
 
+    &__slider {
+        overflow: hidden;
+    }
+
     &__content {
-        width: 75%;
         margin: 0 auto;
     }
 

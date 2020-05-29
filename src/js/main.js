@@ -116,7 +116,7 @@ class CircleProgressCanvas {
   }
 
   _drawBaseCircle() {
-    this._drawArc(Math.PI * 4, "#CCD1C4");
+    this._drawArc(Math.PI * 4, "#e8eedf");
   }
 
   _drawArc(end, lineColor) {
@@ -155,7 +155,7 @@ class Works {
     ];
     this.worksSlider = new Swiper('.works__slider', {
       slidesPerView: 1,
-      spaceBetween: 25,
+      spaceBetween: 35,
   
       pagination: {
         el: '.works-pagination',
@@ -216,10 +216,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const testimonialsSlider = new Swiper ('.testimonials__slider', {
+    spaceBetween: 150,
+    speed: 1000,
+    loop: true,
 
-    navigation: {
-      nextEl: '#testimonials-next',
-      prevEl: '#testimonials-prev',
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
   });
 });
@@ -234,7 +237,7 @@ document.addEventListener("scroll", function() {
     skillsController.init();
   }
 
-  if ( window.scrollY > window.innerHeight && window.scrollY > scrollPrev ) {
+  if (window.scrollY > scrollPrev ) {
     header.hideHeader();
   } else {
     header.showHeader();

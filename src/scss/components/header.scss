@@ -6,7 +6,7 @@
     padding: 15px 0;
     transition: 0.4s;
     background: rgba(47, 70, 59, 0.6);
-    z-index: 3;
+    z-index: 10;
 
     &.out {
         transform: translate(0, -150px);

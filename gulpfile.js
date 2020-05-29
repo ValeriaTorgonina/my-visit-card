@@ -57,7 +57,7 @@ gulp.task("js", () => {
 
 gulp.task("copy", () =>
   gulp
-    .src(["src/assets/**", "src/js/**"], {
+    .src(["src/assets/**", "src/js/**", "src/projects/**"], {
       base: "src",
     })
     .pipe(gulp.dest("build"))
