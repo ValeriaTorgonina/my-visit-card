@@ -21,6 +21,7 @@
         z-index: 2;
         transition: 0.5s;
         color: white;
+
     }
     &__text {
         max-width: 450px;
@@ -51,19 +52,19 @@
         z-index: 1;
         transition: 0.5s;
 
-        &--left {
-            left: 0;
-            top: 0;
-            background: $lightgreen;
-            transform: translate(-51%, 0) skew(-22deg, 0deg);
-        }
+        // &--left {
+        //     left: 0;
+        //     top: 0;
+        //     background: $lightgreen;
+        //     transform: translate(-51%, 0) skew(-22deg, 0deg);
+        // }
     
-        &--right {
-            right: 0;
-            bottom: 0;
-            background: $darkgreen1;
-            transform: translate(51%, 0) skew(-22deg, 0deg);
-        }
+        // &--right {
+        //     right: 0;
+        //     bottom: 0;
+        //     background: $darkgreen1;
+        //     transform: translate(51%, 0) skew(-22deg, 0deg);
+        // }
 
         // &--left {
         //     left: 0;

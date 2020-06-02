@@ -66,6 +66,7 @@
     }
 
     &__description {
+        position: relative;
         width: 65%;
         padding: 50px;
         background: rgba(255, 255, 255, 0.7);
@@ -73,6 +74,7 @@
         text-align: left;
  
         .text {
+            margin-bottom: 100px;
             text-align: left;
         }
     }
@@ -81,6 +83,40 @@
         margin-bottom: 20px;
         font-weight: normal;
         font-size: 30px;
+    }
+
+    &__tags {
+        margin-bottom: 20px;
+    }
+
+    &__tags-item {
+        color: $lightgray;
+        background: $orange;
+        margin-right: 10px;
+        padding: 3px 20px;
+        text-transform: uppercase;
+    }
+
+    &__description-link-wrapper {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        font-size: 18px;
+    }
+
+    &__description-link {
+        display: block;
+        padding-top: 10px;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover {
+            color: $orange;
+        }
+
+        &:active {
+            color: $darkorange;
+        }
     }
 
     // @media( max-width: 800px) {

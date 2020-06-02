@@ -131,31 +131,44 @@ class CircleProgressCanvas {
 class Works {
   constructor() {
     this.worksText = document.querySelector(".works__inner .text");
+    this.worksLink = document.querySelector(".works__description-link");
+    this.worksTags = document.querySelector(".works__tags");
     this.worksValues = [
       {
         id: "works-item-1",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam reiciendis ipsam nisi veniam tempore.",
+        link: "https://github.com/ValeriaTorgonina/Lian",
+        tags: ["gulp", "бэм", "scss"],
       },
       {
         id: "works-item-2",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis explicabo harum perferendis soluta omnis, quo assumenda sunt pariatur.",
+        link: "https://github.com/ValeriaTorgonina/piroll",
+        tags: ["react", "jquery", "scss"],
       },
       {
         id: "works-item-3",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt dolore fugiat? Repellendus repudiandae maxime nihil quasi voluptates? Voluptatem?",
+        link: "https://github.com/ValeriaTorgonina/boostfolia",
+        tags: ["gulp", "jquery"],
       },
       {
         id: "works-item-4",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam reiciendis ipsam nisi veniam tempore.",
+        link: "https://github.com/ValeriaTorgonina/theBand",
+        tags: ["gulp", "photoshop", "scss"],
       },
       {
         id: "works-item-5",
         text: "Lorem dolor sit amet consectetur adipisicing elit. Corporis explicabo harum perferendis soluta omnis, quo assumenda sunt pariatur.",
+        link: "https://github.com/ValeriaTorgonina/css-drawing",
+        tags: ["gulp", "html5", "scss"],
       },
     ];
     this.worksSlider = new Swiper('.works__slider', {
       slidesPerView: 1,
       spaceBetween: 35,
+      loop: true,
   
       pagination: {
         el: '.works-pagination',
@@ -168,9 +181,22 @@ class Works {
 
   addHandlerForWorkText() {
     this.worksSlider.on('transitionEnd', () => {
-      const active = document.querySelector(".works__slider .swiper-slide-active").getAttribute("id");
+      const active = document.querySelector('.works__slider .swiper-slide-active').getAttribute('id');
       const activeValue = this.worksValues.find(item => item.id === active);
       this.worksText.innerHTML = activeValue.text;
+      this.worksLink.innerHTML = activeValue.link;
+      this.worksLink.setAttribute('href', activeValue.link);
+      this.addWorksTags(activeValue.tags);
+    })
+  }
+
+  addWorksTags(tags) {
+    this.worksTags.innerHTML = '';
+    tags.map(tag => {
+      let tagsItem = document.createElement('span');
+      tagsItem.className = "works__tags-item";
+      tagsItem.innerHTML = tag;
+      this.worksTags.append(tagsItem);
     })
   }
 };
