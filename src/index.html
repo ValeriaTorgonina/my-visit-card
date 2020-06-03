@@ -30,6 +30,9 @@
                             <a href="#home" class="main-nav__link active">главная</a>
                         </li>
                         <li class="main-nav__item">
+                            <a href="#about" class="main-nav__link">навыки</a>
+                        </li>
+                        <li class="main-nav__item">
                             <a href="#skills" class="main-nav__link">навыки</a>
                         </li>
                         <li class="main-nav__item">
@@ -50,7 +53,7 @@
             <section class="intro" id="home">
                 <div class="container">
                     <picture class="intro__img">
-                        <img class="lazyload" src="#" data-src="assets/img/1photo.jpg" height="100%" width="100%" alt="valeria torgonina photo">
+                        <img class="lazyload" src="#" data-src="assets/img/photo.jpg" height="100%" width="100%" alt="valeria torgonina photo">
                     </picture>
                     <div class="intro__decor intro__decor--left"></div>
                     <div class="intro__decor intro__decor--right"></div>
@@ -58,15 +61,15 @@
                         <h1 class="main-title">Валерия Торгонина</h1>
                         <h2 class="title">html-верстальщик</h2>
                         <p class="intro__text">
-                            Привет, меня зовут Валерия Торгонина и я html-верстальщик. Это мое портфолио. Предлагаю прокрутить вниз и узнать больше обо мне.
+                            Привет, меня зовут Валерия и я html-верстальщик. Это мое портфолио. Предлагаю прокрутить вниз и узнать больше обо мне.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
-                    <h2 class="title">Общая <br> информация</h2>
+                    <h2 class="title">Обо мне</h2>
                     <p class="text">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis velit,
                          tenetur labore voluptates ut quaerat soluta facere iure aut est illum voluptatum
@@ -214,14 +217,13 @@
                                     <a href="projects/css-drawing/index.html" class="works__item-name" target="_blank">CSS drawing</a>
                                 </div>
                             </div>
-                            <div class="works-pagination"></div>
+                            <div class="swiper-pagination" id="works-pagination"></div>
                         </section>
+
                         <section class="works__description">
                             <h3 class="works__description-title">Описание</h3>
                             <div class="works__tags">
                                 <span class="works__tags-item">gulp</span>
-                                <span class="works__tags-item">БЭМ</span>
-                                <span class="works__tags-item">Jquery</span>
                             </div>
                             <p class="text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 

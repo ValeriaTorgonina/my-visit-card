@@ -1,6 +1,6 @@
 .main-footer {
     padding: 50px 0;
-    background: $darkgreen1;
+    background: $darkgreen;
 
     .container {
         display: flex;
@@ -31,5 +31,28 @@
     &__phone {
         font-weight: normal;
         font-size: 23px;
+    }
+
+    @media( max-width: 800px) {
+        &__mail,
+        &__phone {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 40px 0;
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__mail,
+        &__phone {
+            margin-bottom: 20px;
+        }
     }
 }

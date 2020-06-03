@@ -3,7 +3,7 @@
     padding-bottom: 100px;
     text-align: center;
     box-sizing: border-box;
-    background: url("../../assets/img/3.jpg")  50% 50% no-repeat;
+    background: url("../../assets/img/works-bg.jpg")  50% 50% no-repeat;
     background-size: cover;
     background-attachment: fixed;
 
@@ -19,21 +19,22 @@
     &__slider {
         position: relative;
         width: 32%;
-        padding: 40px 30px;
-        padding-bottom: 60px;
-        background: rgba(255, 255, 255, 0.7);
+        padding: 50px 30px;
+        padding-bottom: 120px;
+        background: rgba(255, 255, 255, 0.8);
         box-sizing: border-box;
         overflow: hidden;
     }
 
-    .swiper-pagination-bullets {
+    .swiper-pagination {
+        position: absolute;
         bottom: 45px !important;
     }
 
     &__item-image img {
         display: block;
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
         margin: 0 auto;
         margin-bottom: 25px;
         border-radius: 50%;
@@ -44,7 +45,6 @@
 
         &:hover {
             filter: grayscale(0) brightness(1);
-            transform: scale(1.1);
         }
     }
 
@@ -69,7 +69,7 @@
         position: relative;
         width: 65%;
         padding: 50px;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.8);
         box-sizing: border-box;
         text-align: left;
  
@@ -86,6 +86,8 @@
     }
 
     &__tags {
+        display: flex;
+        justify-content: start;
         margin-bottom: 20px;
     }
 
@@ -101,7 +103,8 @@
         position: absolute;
         left: 50px;
         bottom: 50px;
-        font-size: 18px;
+        width: calc(100% - 100px);
+        font-size: 20px;
     }
 
     &__description-link {
@@ -109,6 +112,10 @@
         padding-top: 10px;
         font-weight: bold;
         transition: 0.3s;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
         &:hover {
             color: $orange;
@@ -119,96 +126,88 @@
         }
     }
 
-    // @media( max-width: 800px) {
-    //     padding: 60px 0; 
+    @media (max-width: 1200px) {
+        &__inner,
+        &__slider,
+        &__description {
+            display: block;
+            width: 100%;
+        }
 
-    //     .text {
-    //         margin-bottom: 40px;
-    //     }
+        &__slider {
+            margin-bottom: 20px;
+            padding-bottom: 90px;
+        }
 
-    //     &__inner,
-    //     &__person,
-    //     &__skills {
-    //         display: block;
-    //         width: 100%;
-    //     }
+        &__name {
+            margin-bottom: 0;
+        }
+    }
 
-    //     &__person {
-    //         margin-bottom: 20px;
-    //         padding: 50px;
-    //     }
+    @media (max-width: 800px) {
+        padding: 50px 0;
+    }
 
-    //     &__skills {
-    //         padding: 50px;
-    //     }
+    @media (max-width: 600px) {
 
-    //     &__person-slide {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         text-align: left;
-    //     }
+        &__slider {
+            padding: 40px 30px;
+            padding-bottom: 80px;
+        }
 
-    //     &__person-image img {
-    //         margin-right: 20px;
-    //         margin-bottom: 0;
-    //     }
+        &__description {
+            padding: 40px;
 
-    //     &__person-name {
-    //         display: inline-block;
-    //         margin-bottom: 15px;
-    //     }
+            .text {
+                text-align: justify;
+            }
+        }
 
-    //     .socials {
-    //         margin: 0;
-    //     }
+        &__description-title {
+            text-align: center;
+        }
 
-    //     .owl-theme .owl-nav {
-    //         height: 0;
-    //     }
+        &__tags {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    //     .prev {
-    //         left: -10px;
-    //     }
+        &__tags-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
 
-    //     .next {
-    //         right: -10px;
-    //     }
-    // }
+        &__description-link-wrapper {
+            left: 40px;
+            width: calc(100% - 80px);
+            font-size: 16px;
+        }
 
-    // @media (max-width: 500px) {
-    //     &__burger {
-    //         transform: scale(0.9);
-    //         margin-top: 10px;
-    //     }
+    }
 
-    //     &__link {
-    //         padding: 15px 0;
-    //     }     
+    @media (max-width: 420px) {
 
-    //     &__skills,
-    //     &__person {
-    //         padding: 30px;
-    //     }
+        &__slider {
+            padding: 30px 20px;
+            padding-bottom: 50px;
+        }
 
-    //     &__person-image img {
-    //         width: 120px!important;
-    //         height: 120px;
-    //     }
+        .swiper-pagination {
+            bottom: 25px !important;
+        }
 
-    //     &__skills-item {
-    //         flex-wrap: wrap;
-    //     }
+        &__description {
+            padding: 20px;
+        }
 
-    //     &__skills-name {
-    //         display: block;
-    //         width: 100%;
-    //     }
+        &__tags {
+            margin-bottom: 0;
+        }
 
-    //     &__skills-decor {
-    //         display: block;
-    //         width: 80%;
-    //         margin-right: auto;
-    //     }
-    // }
+        &__description-link-wrapper {
+            left: 20px;
+            bottom: 30px;
+            width: calc(100% - 40px);
+        }
+    }
 }

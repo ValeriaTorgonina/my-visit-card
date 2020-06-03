@@ -52,7 +52,7 @@ h1, h2, h3, h4, p {
 }
 
 .text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
 }
 
@@ -139,4 +139,41 @@ h1, h2, h3, h4, p {
     transform: scale(1.2);
 }
 
+@media (max-width: 1200px) {
+    .text {
+        font-size: 16px;
+    }
+}
 
+@media (max-width: 800px) {
+    .main-title {
+        font-size: 45px;
+    } 
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .socials {
+        width: 110px;
+    }    
+
+    .swiper-button-next:after {
+        transform: translate(-20px, 0) scale(0.9);
+    }
+    
+    .swiper-button-prev:after {
+        transform: translate(20px, 0) scale(0.9);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 40px;
+    } 
+
+    .text {
+        font-size: 14px;
+    }
+}

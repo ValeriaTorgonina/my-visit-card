@@ -171,23 +171,32 @@ class Works {
       loop: true,
   
       pagination: {
-        el: '.works-pagination',
+        el: '#works-pagination',
         clickable: true,
       },
+
+      navigation: {
+        nextEl: '#works-next',
+        prevEl: '#works-prev',
+      },
     })
-    
-    this.addHandlerForWorkText();
+    this.changeWorksText();
+    this.addHandlerForWorksSlider();
   };
 
-  addHandlerForWorkText() {
+  addHandlerForWorksSlider() {
     this.worksSlider.on('transitionEnd', () => {
-      const active = document.querySelector('.works__slider .swiper-slide-active').getAttribute('id');
-      const activeValue = this.worksValues.find(item => item.id === active);
-      this.worksText.innerHTML = activeValue.text;
-      this.worksLink.innerHTML = activeValue.link;
-      this.worksLink.setAttribute('href', activeValue.link);
-      this.addWorksTags(activeValue.tags);
+      this.changeWorksText();
     })
+  }
+
+  changeWorksText() {
+    const active = document.querySelector('.works__slider .swiper-slide-active').getAttribute('id');
+    const activeValue = this.worksValues.find(item => item.id === active);
+    this.worksText.innerHTML = activeValue.text;
+    this.worksLink.innerHTML = activeValue.link;
+    this.worksLink.setAttribute('href', activeValue.link);
+    this.addWorksTags(activeValue.tags);
   }
 
   addWorksTags(tags) {
@@ -231,13 +240,25 @@ document.addEventListener("DOMContentLoaded", function() {
   new Works();
 
   const skillsSlider = new Swiper ('.skills__list', {
-    slidesPerView: 3,
-    slidesPerColumn: 2,
     slidesPerColumnFill: 'row',
+    slidesPerView: 1,
+    slidesPerColumn: 1,
+    speed: 500,
 
     navigation: {
       nextEl: '#skills-next',
       prevEl: '#skills-prev',
+    },
+
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+      },
+      800: {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+      },
     },
   });
 

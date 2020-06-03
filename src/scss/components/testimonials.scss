@@ -6,7 +6,7 @@
     box-shadow: 0 0 10px -5px rgb(114, 114, 114);
 
     .title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__quote-icon {
@@ -16,7 +16,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0 auto;
-        fill: $lightgreen1;
+        fill: $green;
         width: 300px;
         height: 300px;
         opacity: 0.3;
@@ -31,8 +31,13 @@
     }
 
     &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         min-height: 250px;
-        padding: 70px 0;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 80px 0;
         font-size: 18px;
         line-height: 35px;
         box-sizing: border-box;
@@ -48,5 +53,33 @@
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
+    }
+
+    
+    @media (max-width: 800px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 600px) {
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 420px) {
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        &__quote-icon {
+            width: 250px;
+            height: 250px;
+        }
+
+        &__text {
+            min-height: 320px;
+            padding: 40px 0;
+        }
     }
 }
