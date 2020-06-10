@@ -1,5 +1,4 @@
 .main-nav {
-
     &__list {
         display: flex;
         justify-content: space-between;
@@ -17,6 +16,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: $lightgray;
+        transition: 0.3s;
 
         &:hover {
             color: $orange;
@@ -28,7 +28,6 @@
 
         &.active {
             color: $orange;
-            font-weight: bold;
         }
     }
 

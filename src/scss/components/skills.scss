@@ -5,6 +5,7 @@
     box-sizing: border-box;
     background: white;
     z-index: 0;
+    box-shadow: 0 0px 5px 0 gray;
 
     .container {
         position: relative;
@@ -36,8 +37,8 @@
     .counter {
         position: relative;
         margin-bottom: 10px;
-        transition: 0.5s;
         background: white;
+        transition: 0.7s;
     }
 
     &__name {
@@ -52,10 +53,10 @@
         margin: 0 auto;
         line-height: 25px;
         opacity: 0;
-        transition: 0.5s;
+        transition: 0.7s;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         padding: 50px 0;
     }
 }

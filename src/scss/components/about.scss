@@ -1,25 +1,54 @@
 .about {
-    padding: 80px 0;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 60px;
     text-align: center;
-    background: $lightgreen;
+    background: white;
 
     .text {
-        margin: 0 auto;
-        margin-bottom: 40px;
-        width: 80%;
-    }
+        position: relative;
+        padding: 30px 40px;
+        width: 70%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background: $lightgreen;
 
-    @media (max-width: 1200px) {
-        .text {
-            width: 100%;
+        &:nth-of-type(2n + 1) {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        &:nth-of-type(2n) {
+            margin-right: auto;
+            text-align: left;
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         padding: 50px 0;
+    }
 
+    @media (max-width: 800px) {
         .text {
-            margin-bottom: 20px;
+            width: 100%;
+            text-indent: 40px;
+
+            &:nth-of-type(1n) {
+                text-align: justify;
+            }
+        }
+    }
+
+    @media (max-width: 600px) { 
+        .text {
+            padding: 20px 30px;
+        }
+    }
+
+    @media (max-width: 420px) { 
+        .text {
+            padding: 0;
+            background: none;
         }
     }
 }

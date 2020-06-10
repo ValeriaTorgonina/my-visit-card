@@ -136,43 +136,64 @@ class Works {
     this.worksValues = [
       {
         id: "works-item-1",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam reiciendis ipsam nisi veniam tempore.",
-        link: "https://github.com/ValeriaTorgonina/Lian",
-        tags: ["gulp", "бэм", "scss"],
+        text: "Это один из проектов, в доработке которых я участвовала на прошлой работе. Мои обязанности простирались от правки отступов и кнопочек до доработки js и написания адаптивных версий",
+        link: "Нет",
+        tags: ["html5", "css3", "jquery"],
       },
       {
         id: "works-item-2",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis explicabo harum perferendis soluta omnis, quo assumenda sunt pariatur.",
-        link: "https://github.com/ValeriaTorgonina/piroll",
-        tags: ["react", "jquery", "scss"],
+        text: "Это один из проектов, в доработке которых я участвовала на прошлой работе. Мои обязанности простирались от правки отступов и кнопочек до доработки js и написания адаптивных версий",
+        link: "Нет",
+        tags: ["html5", "css3", "jquery"],
       },
       {
         id: "works-item-3",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt dolore fugiat? Repellendus repudiandae maxime nihil quasi voluptates? Voluptatem?",
-        link: "https://github.com/ValeriaTorgonina/boostfolia",
-        tags: ["gulp", "jquery"],
+        text: "Это один из проектов, в доработке которых я участвовала на прошлой работе. Мои обязанности простирались от правки отступов и кнопочек до доработки js и написания адаптивных версий",
+        link: "Нет",
+        tags: ["html5", "css3", "jquery"],
       },
       {
         id: "works-item-4",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam reiciendis ipsam nisi veniam tempore.",
+        text: "При верстке theBand мне захотелось попробовать отказаться от jquery. Спойлер: у меня получилось (и я нашла действительно классную библиотеку для слайдеров - Swiper). Также я увлеклась плеером, который должен был находиться на странице, и позаботилась о том, чтобы он 'издавал звуки'.",
         link: "https://github.com/ValeriaTorgonina/theBand",
-        tags: ["gulp", "photoshop", "scss"],
+        tags: ["native js", "swiper"],
       },
       {
         id: "works-item-5",
-        text: "Lorem dolor sit amet consectetur adipisicing elit. Corporis explicabo harum perferendis soluta omnis, quo assumenda sunt pariatur.",
+        text: "На boostfolia я оттачивала навыки. Помимо этого я познакомилась с паралакс-эффектом и опробовала его на первом экране.",
+        link: "https://github.com/ValeriaTorgonina/boostfolia",
+        tags: ["parallax effect"],
+      },
+      {
+        id: "works-item-6",
+        text: "Piroll стал первым проектом, на котором я начала изучать тонкости оптимизации, научилась собирать спрайты и полезла в gulp для его доработки (изначально я брала готовый сборщик). Также здесь я начала писать js для обработки кликов, всплывающих окон и т.д.",
+        link: "https://github.com/ValeriaTorgonina/piroll",
+        tags: ["gulp", "jquery", "lazyload"],
+      },
+      {
+        id: "works-item-7",
+        text: "Мой первый многостраничный проект. Когда я делала Lian, еще практически ничего не знала о многих нюансах в верстке и надеялась отточить на этом проекте методологию БЭМ. Lian в этом списке потому, что относительно него отлично видно мой прогресс в качестве верстальщика.",
+        link: "https://github.com/ValeriaTorgonina/Lian",
+        tags: ["html5", "бэм", "scss"],
+      },
+      {
+        id: "works-item-8",
+        text: "Бонус. Это просто страница с моими рисунками на css. Каждая содержит маленькую анимацию.",
         link: "https://github.com/ValeriaTorgonina/css-drawing",
-        tags: ["gulp", "html5", "scss"],
+        tags: ["scss", "animation"],
       },
     ];
     this.worksSlider = new Swiper('.works__slider', {
       slidesPerView: 1,
       spaceBetween: 35,
       loop: true,
+      speed: 500,
   
       pagination: {
         el: '#works-pagination',
         clickable: true,
+        // dynamicBullets: true,
+        // dynamicMainBullets: 5,
       },
 
       navigation: {
@@ -239,6 +260,13 @@ class Header {
 document.addEventListener("DOMContentLoaded", function() {
   new Works();
 
+  AOS.init({
+    duration: 800,
+    disable: 'mobile'
+  });
+
+  var rellax = new Rellax('.rellax');
+
   const skillsSlider = new Swiper ('.skills__list', {
     slidesPerColumnFill: 'row',
     slidesPerView: 1,
@@ -277,10 +305,11 @@ const header = new Header();
 const skillsController = new CircleProgressController('.counter');
 const skills = document.querySelector(".skills");
 const skillsCordTop = skills.offsetTop;
+const halfOfWindow = document.documentElement.clientHeight / 2;
 let scrollPrev = 0;
 
 document.addEventListener("scroll", function() {
-  if(skillsCordTop <= pageYOffset) {
+  if(skillsCordTop <= (pageYOffset + halfOfWindow)) {
     skillsController.init();
   }
 

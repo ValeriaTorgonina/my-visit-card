@@ -33,19 +33,14 @@
 
     &__item-image img {
         display: block;
+        background: white;
         width: 200px;
         height: 200px;
         margin: 0 auto;
         margin-bottom: 25px;
         border-radius: 50%;
-        overflow: hidden;
         object-fit: cover;
-        filter:grayscale(1) brightness(0.8);
         transition: 0.5s;
-
-        &:hover {
-            filter: grayscale(0) brightness(1);
-        }
     }
 
     &__item-name {
@@ -81,7 +76,6 @@
 
     &__description-title {
         margin-bottom: 20px;
-        font-weight: normal;
         font-size: 30px;
     }
 
@@ -110,7 +104,6 @@
     &__description-link {
         display: block;
         padding-top: 10px;
-        font-weight: bold;
         transition: 0.3s;
         width: 100%;
         text-overflow: ellipsis;
@@ -127,6 +120,8 @@
     }
 
     @media (max-width: 1200px) {
+        padding: 50px 0;
+
         &__inner,
         &__slider,
         &__description {
@@ -144,11 +139,11 @@
         }
     }
 
-    @media (max-width: 800px) {
-        padding: 50px 0;
-    }
-
     @media (max-width: 600px) {
+
+        .title {
+            margin-bottom: 40px;
+        }
 
         &__slider {
             padding: 40px 30px;
