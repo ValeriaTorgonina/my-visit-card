@@ -215,9 +215,20 @@ class Works {
     const active = document.querySelector('.works__slider .swiper-slide-active').getAttribute('id');
     const activeValue = this.worksValues.find(item => item.id === active);
     this.worksText.innerHTML = activeValue.text;
-    this.worksLink.innerHTML = activeValue.link;
-    this.worksLink.setAttribute('href', activeValue.link);
+    this.changeWorksLinks(activeValue.link)
     this.addWorksTags(activeValue.tags);
+  }
+
+  changeWorksLinks(value) {
+
+    this.worksLink.innerHTML = value;
+    if(value.length <= 3 ) {
+      this.worksLink.setAttribute('href', '#');
+      this.worksLink.style = "pointer-events: none;";
+    }else {
+      this.worksLink.setAttribute('href', value);
+      this.worksLink.style = "pointer-events: auto;";
+    }
   }
 
   addWorksTags(tags) {
@@ -265,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function() {
     disable: 'mobile'
   });
 
-  var rellax = new Rellax('.rellax');
+  const rellax = new Rellax('.rellax');
 
   const skillsSlider = new Swiper ('.skills__list', {
     slidesPerColumnFill: 'row',
@@ -300,6 +311,8 @@ document.addEventListener("DOMContentLoaded", function() {
       disableOnInteraction: false,
     },
   });
+
+
 });
 const header = new Header();
 const skillsController = new CircleProgressController('.counter');
@@ -313,7 +326,7 @@ document.addEventListener("scroll", function() {
     skillsController.init();
   }
 
-  if (window.scrollY > scrollPrev ) {
+  if (window.scrollY > window.innerHeight && window.scrollY > scrollPrev) {
     header.hideHeader();
   } else {
     header.showHeader();

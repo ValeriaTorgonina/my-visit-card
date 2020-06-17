@@ -66,6 +66,10 @@
             margin-left: 0;
             padding: 20px 0;
             text-align: center;
+
+            &:hover {
+                color: $lightgray;
+            }
         }
 
         &__burger {
@@ -91,17 +95,6 @@
                 height: 2px;
                 background: $lightgray;
                 transition: 0.3s;
-            }
-    
-            &:hover {
-                border-top: 2px solid $orange;
-                border-bottom: 2px solid $orange;
-    
-                &:before,
-                &:after {
-                    background: $orange;
-                }
-    
             }
             
             &:active {

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poiret One', cursive;
+    font-family: 'Poiret One', 'Arial', cursive;
     color: $darkgray;
     font-weight: bold;
 }
@@ -35,13 +35,13 @@ h1, h2, h3, h4, p {
 }
 
 .main-title {
-    font-size: 55px;
+    font-size: 65px;
     margin-bottom: 10px;
 }
 
 .title {
     display: inline-block;
-    font-size: 38px;
+    font-size: 50px;
     margin-bottom: 40px;
     text-transform: capitalize;
 
@@ -105,6 +105,8 @@ h1, h2, h3, h4, p {
 
 .swiper-button-prev,
 .swiper-button-next {
+    transform: translate(40px, 0) scale(0.9);
+
     &:hover:after {
         color: $orange;
     }
@@ -118,19 +120,35 @@ h1, h2, h3, h4, p {
         outline: none;
     }
 }
+.swiper-button-prev {
+    transform: translate(-40px, 0) scale(0.9);
+}
 
 .swiper-button-next:after, 
 .swiper-button-prev:after {
     color: $lightgray;
-    transform: translate(40px, 0) scale(0.9);
-}
-
-.swiper-button-prev:after {
-    transform: translate(-40px, 0) scale(0.9);
 }
 
 .swiper-pagination-bullets {
     --swiper-theme-color: #BB3F0C;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    z-index: 0;
+}
+
+.swiper-pagination-bullet {
+    outline: none;
+}
+
+@media (max-width: 1400px) {
+    .main-title {
+        font-size: 55px;
+    } 
+
+    .title {
+        font-size: 38px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -153,18 +171,25 @@ h1, h2, h3, h4, p {
         width: 110px;
     }    
 
-    .swiper-button-next:after {
+    .swiper-button-next {
         transform: translate(-20px, 0) scale(0.9);
     }
     
-    .swiper-button-prev:after {
+    .swiper-button-prev {
         transform: translate(20px, 0) scale(0.9);
     }
 }
 
 @media (max-width: 600px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        &:hover:after {
+            color: $lightgray;
+        }
+    }
     .main-title {
         font-size: 40px;
+        margin-bottom: 20px;
     } 
 
     .text {
