@@ -9,6 +9,7 @@
 
     .title {
         margin-bottom: 70px;
+        opacity: 0.8 !important;
     }
 
     &__inner {
@@ -47,7 +48,7 @@
         font-size: 26px;
         text-transform: capitalize;
         transition: 0.3s;
-        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid $darkgray;
 
         &:hover {
             color: $orange;
@@ -77,6 +78,7 @@
     &__description-title {
         margin-bottom: 20px;
         font-size: 30px;
+        font-weight: 300;
     }
 
     &__tags {

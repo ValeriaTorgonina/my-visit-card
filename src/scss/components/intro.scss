@@ -1,13 +1,20 @@
 .intro {
     position: relative;
     overflow: hidden;
-    margin-top: 80px;
     background-color: $darkgreen;
-    background-image: url("../../assets/img/intro-bg.jpg");
-    background-size: cover;
+
+    @media (orientation: landscape) {
+        background-image: url("../../assets/img/intro-bg.jpg");
+        background-size: cover;
+    }
+
+    @media (orientation: portrait) {
+        background: $darkgreen url("../../assets/img/intro-bg--mobil.jpg") 50% 0% no-repeat;
+        background-size: cover;
+    }
     
     .container {
-        height: calc(100vh - 80px);
+        height: 100vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -16,6 +23,7 @@
     &__content {
         width: 65%;
         color: white;
+        opacity: 0.8;
     }
     
     &__text {
@@ -34,6 +42,7 @@
     }
 
     @media (max-width: 800px) {
+
         &__text {
             font-size: 18px;
             line-height: 30px;
@@ -41,13 +50,6 @@
     }
 
     @media (max-width: 600px) {
-        background: $darkgreen url("../../assets/img/intro-bg--mobil.jpg") 50% 0% no-repeat;
-        background-size: cover;
-        margin-top: 60px;
-
-        .container {
-            height: calc(100vh - 60px);
-        }
 
         &__text {
             margin: 0 auto;
